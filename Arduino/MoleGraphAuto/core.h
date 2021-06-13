@@ -37,6 +37,9 @@
 // Uncomment to enable printing out nice debug messages.
 //#define DEBUG
 
+#define MAX_CHANNELS    8
+extern Channel channels[MAX_CHANNELS];
+
 enum Instructions
 {
   INS_NONE = 0,
@@ -107,6 +110,9 @@ extern uint32_t time;
 extern bool firstSample;
 extern uint32_t period;
 extern uint8_t  dataReady;
+
+void clean();
+void addChannelSensor(uint8_t _channel, SensorType _type, uint32_t _period, int8_t _port, uint8_t _spec);
 
 void enableChannels();
 void start();

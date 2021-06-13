@@ -53,6 +53,19 @@ void setup() {
 
   Timer_Init();
   SystemInit();
+
+/*
+  clean();
+  addChannelSensor(0, SENSOR_AD, 0, 1, 0);
+  channels[0].Enable();
+  addChannelSensor(1, SENSOR_LED, 0, 0, 0);
+  channels[1].Enable();
+  uint16_t x = 10;
+  period = (uint32_t)((1 / TIME_BASE) / x);    // nastaveni periody vzorkovani v 0.5 us [zadano v Hz] 
+//  period = (uint32_t)x * (1000 * TICK_PER_MS);    // nastaveni periody vzorkovani v 0.5 us [zadano v s] 
+  running = 1;
+  start(); 
+*/
 }
 
 void loop() {

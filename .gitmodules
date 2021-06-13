@@ -1,0 +1,12 @@
+[submodule "Arduino/MoleGraphAuto/Adafruit_LSM303DLHC"]
+	path = Arduino/MoleGraphAuto/Adafruit_LSM303DLHC
+	url = https://github.com/adafruit/Adafruit_LSM303DLHC.git
+[submodule "Arduino/MoleGraphAuto/Adafruit_Sensor"]
+	path = Arduino/MoleGraphAuto/Adafruit_Sensor
+	url = https://github.com/adafruit/Adafruit_Sensor.git
+[submodule "Arduino/MoleGraphAuto/Adafruit_VEML6070"]
+	path = Arduino/MoleGraphAuto/Adafruit_VEML6070
+	url = https://github.com/adafruit/Adafruit_VEML6070.git
+[submodule "Arduino/MoleGraphAuto/BH1750"]
+	path = Arduino/MoleGraphAuto/BH1750
+	url = https://github.com/claws/BH1750.git

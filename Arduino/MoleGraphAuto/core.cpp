@@ -118,8 +118,8 @@ void start() {
         sensors[i]->start(time);
       }
     }
-//    time -= period;
-    time -= 5 * TICK_PER_MS;  // odesilani dat 5ms pred novym samplem, prvni data az po uplynuti periody-5
+    time -= period;
+//    time -= 5 * TICK_PER_MS;  // odesilani dat 5ms pred novym samplem, prvni data az po uplynuti periody-5
   }
 }
 
@@ -238,16 +238,16 @@ void setScanType() {
 }
 
 void setPeriod(bool f) {
-  DEBUG_MSG("setPeriod %d", f)
   uint16_t x;
   Serial.readBytes((uint8_t*)&x, 2);
   if (f == 0) {
     period = (uint32_t)x * (1000 * TICK_PER_MS);    // nastaveni periody vzorkovani v 0.5 us [zadano v s] 
-    DEBUG_MSG("period = %d [s]", period)
+    DEBUG_MSG("setPeriod %d [s]", x)
   } else {
     period = (uint32_t)((1 / TIME_BASE) / x);    // nastaveni periody vzorkovani v 0.5 us [zadano v Hz] 
-    DEBUG_MSG("period = %d [Hz]", period)
+    DEBUG_MSG("setFreq = %d [Hz]", x)
   }
+  DEBUG_MSG("period = %d [0,5us]", period)
 }
 
 void calibrate(uint8_t button){
